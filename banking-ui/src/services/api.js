@@ -2,7 +2,7 @@
 const API_SYSTEM1 = "https://banking-system-poc-backend-system-1.onrender.com";
 const API_SYSTEM2="https://banking-system-poc-backend-system2.onrender.com"
 export async function makeTransaction({ cardNumber, pin, amount, type }) {
-  const res = await fetch(`${API_SYSTEM1}/transaction`, {
+  const res = await fetch(`${API_SYSTEM1}/api/system1/transaction`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export async function makeTransaction({ cardNumber, pin, amount, type }) {
 }
 
 export async function getCustomerTransactions(cardNumber) {
-  const res = await fetch(`${API_SYSTEM2}/logs/${cardNumber}`);
+  const res = await fetch(`${API_SYSTEM2}/api/logs/${cardNumber}`);
   
   if (!res.ok) {
     throw new Error(`Server error: ${res.status}`);
@@ -35,7 +35,7 @@ export async function getCustomerTransactions(cardNumber) {
 }
 
 export async function getAllTransactions() {
-  const res = await fetch(`${API_SYSTEM2}/logs`);
+  const res = await fetch(`${API_SYSTEM2}/api/logs`);
   
   if (!res.ok) {
     throw new Error(`Server error: ${res.status}`);

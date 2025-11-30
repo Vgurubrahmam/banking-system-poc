@@ -21,7 +21,8 @@ public class CorsConfig {
             "http://localhost:5174",
             "http://localhost:3000",
             "https://banking-system-poc.onrender.com",
-            "https://banking-system-poc-frontend.onrender.com"
+            "https://banking-system-poc-frontend.onrender.com",
+            "https://banking-system-poc-mu.vercel.app"
         ));
         
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
