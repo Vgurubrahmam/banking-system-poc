@@ -11,7 +11,7 @@ public class TransactionService {
     private final RestTemplate restTemplate;
 
     // System2 URL
-    private static final String SYSTEM2_URL = "http://localhost:8082/api/process";
+    private static final String SYSTEM2_URL = "https://banking-system-poc-backend-system2.onrender.com/api/process";
 
     public TransactionService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
