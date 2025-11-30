@@ -1,6 +1,6 @@
 
-const API_SYSTEM1 = "http://localhost:8080/api/system1";
-const API_SYSTEM2="http://localhost:8082/api"
+const API_SYSTEM1 = "https://banking-system-poc-backend-system-1.onrender.com";
+const API_SYSTEM2="https://banking-system-poc-backend-system2.onrender.com"
 export async function makeTransaction({ cardNumber, pin, amount, type }) {
   const res = await fetch(`${API_SYSTEM1}/transaction`, {
     method: 'POST',
